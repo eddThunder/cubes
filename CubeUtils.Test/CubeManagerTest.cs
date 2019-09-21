@@ -54,7 +54,7 @@ namespace CubeUtils.Test
         }
 
         [TestMethod]
-        public void GetRestBetweenSpacesInAxis_should_Return_true()
+        public void GetRestBetweenSpacesInAxis_should_return_true()
         {
             float axisValueCube1 = 2;
             float axisValueCube2 = 4;
@@ -69,7 +69,7 @@ namespace CubeUtils.Test
         }
 
         [TestMethod]
-        public void GetIntersectionVolume_should_Return_true()
+        public void GetIntersectionVolume_should_return_true()
         {
             var cube1 = new CubeBuilder().WithSize(4).WithCenterX(4).WithCenterY(4).WithCenterZ(4).Build();
 
@@ -80,6 +80,16 @@ namespace CubeUtils.Test
             float expectedResult = 16; 
 
             Assert.AreEqual(result, expectedResult);
+        }
+
+        [TestMethod]
+        public void ComparePoints_should_return_true()
+        {
+            var point1 = new PointBuilder().WithX(2).WithY(2).WithZ(2).Build();
+
+            var point2 = new PointBuilder().WithX(2).WithY(2).WithZ(2).Build();
+
+            Assert.IsTrue(ComparePoints(point1, point2));
         }
 
         private bool ComparePoints(Point p1, Point p2)
