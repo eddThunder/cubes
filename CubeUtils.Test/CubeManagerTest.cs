@@ -1,4 +1,5 @@
 ﻿
+using CubeUtils.Interfaces;
 using CubeUtils.Models;
 using CubeUtils.Test.Builders;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -8,7 +9,7 @@ namespace CubeUtils.Test
     [TestClass]
     public class CubeManagerTest
     {
-        CubeManager cubeManager;
+        ICubeManager cubeManager;
 
         [TestInitialize]
         public void TestInit()
