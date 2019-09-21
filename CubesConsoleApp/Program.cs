@@ -78,7 +78,7 @@ namespace CubesConsoleApp
             bool parseSuccess = false;
             do
             {
-                Console.WriteLine("Please insert an even number for cube size");
+                Console.WriteLine("Please insert a number for cube size");
                 parseSuccess = float.TryParse(Console.ReadLine(), out cubeSize);
 
             } while(cubeSize < 0 || !parseSuccess);
