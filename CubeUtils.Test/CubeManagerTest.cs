@@ -1,6 +1,4 @@
-﻿
-using CubeUtils.Interfaces;
-using CubeUtils.Models;
+﻿using CubeUtils.Models;
 using CubeUtils.Test.Builders;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -18,7 +16,7 @@ namespace CubeUtils.Test
         }
 
         [TestMethod]
-        public void GetFirstCubeMatrixPosition_should_return_true()
+        public void GetFirstCubeMatrixPosition_withCorrectOriginpoint_should_return_true()
         {
             //Arrange
             var cube = new CubeBuilder().WithSize(4).WithCenterX(4).WithCenterY(4).WithCenterZ(4).Build();
@@ -32,7 +30,7 @@ namespace CubeUtils.Test
         }
 
         [TestMethod]
-        public void HasCollision_should_return_true()
+        public void HasCollision_collideWithOtherCube_should_return_true()
         {
             //Arrange
             var cube1 = new CubeBuilder().WithSize(4).WithCenterX(4).WithCenterY(4).WithCenterZ(4).Build();
@@ -46,7 +44,7 @@ namespace CubeUtils.Test
         }
 
         [TestMethod]
-        public void HasCollision_should_return_false()
+        public void HasCollision_notCollideWithOtherCube_should_return_false()
         {
             //Arrange
             var cube1 = new CubeBuilder().WithSize(2).WithCenterX(2).WithCenterY(2).WithCenterZ(2).Build();
@@ -60,7 +58,7 @@ namespace CubeUtils.Test
         }
 
         [TestMethod]
-        public void GetRestBetweenSpacesInAxis_should_return_true()
+        public void GetRestBetweenSpacesInAxis_withCorrectResult_should_return_true()
         {
             //Arrange
             float axisValueCube1 = 2;
@@ -77,7 +75,7 @@ namespace CubeUtils.Test
         }
 
         [TestMethod]
-        public void GetIntersectionVolume_should_return_true()
+        public void GetIntersectionVolume_withCorrectResult_should_return_true()
         {
             //Arrange
             var cube1 = new CubeBuilder().WithSize(4).WithCenterX(4).WithCenterY(4).WithCenterZ(4).Build();
@@ -92,7 +90,7 @@ namespace CubeUtils.Test
         }
 
         [TestMethod]
-        public void ComparePoints_should_return_true()
+        public void ComparePoints_whenAreEqual_should_return_true()
         {
             //Arrange
             var point1 = new PointBuilder().WithX(2).WithY(2).WithZ(2).Build();
