@@ -7,7 +7,7 @@ namespace CubeUtils.Test
     [TestClass]
     public class CubeManagerTest
     {
-        CubeManager cubeManager { get; set; }
+        private CubeManager cubeManager { get; set; }
 
         [TestInitialize]
         public void TestInit()
